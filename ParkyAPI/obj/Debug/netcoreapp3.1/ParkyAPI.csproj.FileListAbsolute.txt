@@ -68,3 +68,4 @@ C:\Users\pavilion\source\repos\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\Swashbuckl
 C:\Users\pavilion\source\repos\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\pavilion\source\repos\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\pavilion\source\repos\Parky\ParkyAPI\bin\Debug\netcoreapp3.1\ParkyAPI.xml
+C:\Users\pavilion\source\repos\Parky\ParkyAPI\obj\Debug\netcoreapp3.1\ParkyAPI.csprojAssemblyReference.cache
