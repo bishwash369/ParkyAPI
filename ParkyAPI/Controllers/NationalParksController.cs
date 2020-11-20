@@ -24,6 +24,10 @@ namespace ParkyAPI.Controllers
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Get list of national parks.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult GetNationalParks()
         {
@@ -31,14 +35,19 @@ namespace ParkyAPI.Controllers
 
             var objDto = new List<NationalParkDto>();   //fetching data from DTO instrad of main models
 
-            /*  foreach (var obj in objList)                //objList fetches list from repository whereas objDto fetches list from our Dto
+              foreach (var obj in objList)                //objList fetches list from repository whereas objDto fetches list from our Dto
               {
                   objDto.Add(_mapper.Map<NationalParkDto>(obj));     //mapping object from NationalParkDto [where obj is the source of the object]
-              }*/
-            objDto.AddRange(_mapper.Map<List<NationalParkDto>>(objDto));
+              }
+            //objDto.AddRange(_mapper.Map<List<NationalParkDto>>(objDto));
             return Ok(objDto);
         }
-    
+        
+        /// <summary>
+        /// Gt individual list of national parks
+        /// </summary>
+        /// <param name="nationalParkId"> Id of the National park</param>
+        /// <returns></returns>
 
         [HttpGet("{nationalParkId:int}", Name = "GetNationalPark")]
         public IActionResult GetNationalPark(int nationalParkId)

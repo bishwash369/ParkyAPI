@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkyAPI.Models.Dtos
 {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public class NationalParkDto
     {
         [Key]
@@ -19,3 +20,4 @@ namespace ParkyAPI.Models.Dtos
 
     }
 }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
