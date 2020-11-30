@@ -1,16 +1,18 @@
-﻿using ParkyAPI.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ParkyAPI.Data;
 using ParkyAPI.Models;
+using ParkyAPI.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ParkyAPI.Repository.IRepository
+namespace ParkyAPI.Repository
 {
     public class NationalParkRepository : INationalParkRepository
     {
         private readonly ApplicationDbContext _db;
-
+         
         public NationalParkRepository(ApplicationDbContext db)
         {
             _db = db;             //to access your DbContext
@@ -30,7 +32,7 @@ namespace ParkyAPI.Repository.IRepository
 
         public NationalPark GetNationalPark(int nationalParkId)
         {
-            return _db.NationalParks.FirstOrDefault(a => a.Id == nationalParkId); //returns only one obj/value Id.
+            return _db.NationalParks.FirstOrDefault(a => a.Id == nationalParkId);
         }
 
         ICollection<NationalPark> INationalParkRepository.GetNationalParks()
@@ -59,5 +61,17 @@ namespace ParkyAPI.Repository.IRepository
             _db.NationalParks.Update(nationalPark);
             return Save();
         }
+
+        public ICollection<NationalPark> GetNationalParks()
+        {
+            throw new NotImplementedException(); 
+        }
+
+        public ICollection<Trail> GetTrailsInNationalPark(int npId)
+        {
+            throw new NotImplementedException();
+
+        }
+
     }
 }
